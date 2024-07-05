@@ -57,3 +57,8 @@ let gameCounter = 100;
 ++gameCounter;
 
 console.log(gameCounter);
+
+// Stack (Primitives)
+// Heap (Non-Primitives)
+
+let myYoutubename = "AswinAsok0"
