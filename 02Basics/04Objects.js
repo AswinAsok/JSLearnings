@@ -17,7 +17,7 @@ const regularuser = {
     },
 };
 
-console.log(regularuser.fullname?.userfullname.firstname);
+// console.log(regularuser.fullname?.userfullname.firstname);
 
 const obj1 = {
     1: "a",
@@ -35,30 +35,47 @@ const obj2 = {
 // };
 
 // const obj3 = Object.assign({}, obj1, obj2);
-const obj3 = {
-    ...obj1,
-    ...obj2,
+// const obj3 = {
+//     ...obj1,
+//     ...obj2,
+// };
+
+// console.log(obj3);
+
+// const users = [
+//     {
+//         id: "1",
+//         email: "h@gamil.com",
+//     },
+//     {
+//         id: "2",
+//         email: "g@gmail.com",
+//     },
+// ];
+
+// users[1].email;
+
+// console.log(tinderUser);
+
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty("isLogged"));
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh",
 };
 
-console.log(obj3);
+// course.courseInstructor;
 
-const users = [
-    {
-        id: "1",
-        email: "h@gamil.com",
-    },
-    {
-        id: "2",
-        email: "g@gmail.com",
-    },
-];
+const { courseInstructor: instructor } = course;
 
-users[1].email;
+console.log(instructor);
 
-console.log(tinderUser);
+// const navbar = ({ company }) => {};
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// navbar((company = "aswin"));
 
-console.log(tinderUser.hasOwnProperty("isLogged"));
