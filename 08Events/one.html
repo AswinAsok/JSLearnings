@@ -56,6 +56,42 @@
         </div>
     </body>
     <script>
-        
+        // document.getElementById("owl").onclick = function () {
+        //     alert("Owlishh");
+        // };
+
+        // document.getElementById("images").addEventListener(
+        //     "click",
+        //     function (event) {
+        //         console.log("clicked inside in the ul");
+        //     },
+        //     false
+        // );
+
+        // document.getElementById("owl").addEventListener(
+        //     "click",
+        //     function (event) {
+        //         console.log("owll clicked");
+        //         event.stopPropagation();
+        //     },
+        //     false
+        // );
+
+        // document.getElementById("google").addEventListener("click", (e) => {
+        //     e.preventDefault();
+        // });
+
+        document.querySelector("#images").addEventListener(
+            "click",
+            (e) => {
+                console.log(e.target.parentNode);
+            },
+            false
+        );
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget
+        // clientX, clientY, offsetX, offsetY, screenX, screenY
+        // altKey, ctrlKey, shiftCode, keyCode
     </script>
 </html>
