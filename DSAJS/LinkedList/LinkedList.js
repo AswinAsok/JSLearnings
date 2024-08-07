@@ -32,3 +32,39 @@ LinkedList.prototype.insertAtEnd = function (data) {
         last.next = newNode;
     }
 };
+
+//Insert at a given point
+LinkedList.prototype.insertAfter = function (prevNode, data) {
+    if (!prevNode) {
+        console.log("The given prev node cannot be null");
+    } else {
+        const newNode = new Node(data, prevNode.next);
+        prevNode.next = newNode;
+    }
+};
+
+// delete the first node
+LinkedList.prototype.deleteFirstNode = function () {
+    if (!this.head) {
+        return;
+    }
+    this.head = this.head.next;
+};
+
+//delete the last node
+LinkedList.prototype.deleteLastNode = function () {
+    if (!this.head) {
+        return;
+    } else if (!this.head.next) {
+        this.head = null; //if there is only one node.
+        return;
+    } else {
+        let secondLast = head;
+
+        while (secondLast.next.next) {
+            secondLast = secondLast.next;
+        }
+
+        secondLast.next = null;
+    }
+};
