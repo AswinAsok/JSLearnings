@@ -14,6 +14,7 @@ class LinkedList {
 //Insert at the start
 LinkedList.prototype.insertAtBeginning = function (data) {
     const newNode = new Node(data);
+    newNode.next = this.head;
     this.head = newNode;
 };
 
@@ -67,4 +68,51 @@ LinkedList.prototype.deleteLastNode = function () {
 
         secondLast.next = null;
     }
+};
+
+//delete a speicific node
+LinkedList.prototype.deleteByKey = function (key) {
+    //if list is empty
+    if (!this.head) {
+        return;
+    } else if (this.head.data === key) {
+        this.head = this.head.next;
+        return;
+    } else {
+        let current = this.head;
+
+        while (current.next) {
+            if (current.next.data === key) {
+                current.next = current.next.next;
+                return;
+            }
+
+            current = current.next;
+        }
+    }
+};
+
+LinkedList.prototype.search = function (key) {
+    let current = this.head;
+
+    while (current) {
+        if (current.data == key) {
+            return true;
+        }
+    }
+
+    return false;
+};
+
+LinkedList.prototype.printList = function () {
+    let current = this.head;
+
+    let listValues = [];
+
+    while (current) {
+        listValues.push(current.data);
+        current = current.next;
+    }
+
+    console.log(listValues);
 };
