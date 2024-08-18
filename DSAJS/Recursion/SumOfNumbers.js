@@ -6,5 +6,5 @@ function sumOfNumbers(number) {
     return number + sumOfNumbers(number - 1);
 }
 
-console.log(sumOfNumbers(10));
+console.log(sumOfNumbers(10 ));
 
