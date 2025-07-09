@@ -29,3 +29,26 @@ document.getElementById("addNewItem").addEventListener("click", function () {
 
     document.getElementById("shoppingList").appendChild(newItem);
 });
+
+//example 6
+
+document.getElementById("clickMeButton").addEventListener("dblclick", function () {
+    alert("chaicode");
+});
+
+//example 7
+
+document.getElementById("teaList").addEventListener("click", function (event) {
+    if (event.target && event.target.matches("#teaItem")) {
+        console.log(teaItem);
+        alert("You selected: " + event.target.textContent);
+    }
+});
+
+document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let feedback = document.getElementById("feedbackInput").value;
+
+    document.getElementById("formMessage").textContent = feedback;
+});
