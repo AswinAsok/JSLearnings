@@ -10,7 +10,7 @@ function fetchUserData() {
 }
 
 async function getUserData() {
-    await fetchUserData()
+    return await fetchUserData()
         .then((response) => {
             return response;
         })
